@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sda.javafx.controller.RootController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="Plik">
+            <items>
+              <MenuItem fx:id="exitMenuItem" mnemonicParsing="false" onAction="#closeApplication" text="Wyjście z programu" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" onShowing="#onShowingMenu" text="Kontakt">
+            <items>
+              <MenuItem fx:id="addContactMenuItem" mnemonicParsing="false" onAction="#addContact" text="Dodaj" />
+                  <MenuItem fx:id="editContactMenuItem" mnemonicParsing="false" onAction="#editContact" text="Modyfikuj" />
+                  <MenuItem fx:id="removeContactMenuItem" mnemonicParsing="false" onAction="#removeContact" text="Usuń" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Pomoc">
+            <items>
+              <MenuItem fx:id="aboutMenuItem" mnemonicParsing="false" onAction="#about" text="O programie..." />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>
